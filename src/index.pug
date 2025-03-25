@@ -1,0 +1,21 @@
+extends ./pug/layouts/main-layout
+
+block variables
+  -
+    const title = "energy"
+    const description = "energy"
+    const keywords = ""
+    const styles = ['./styles/template-styles','./styles/index']
+
+block content
+  include ./pug/sections/hero/hero
+  include ./pug/sections/catalog/catalog
+  include ./pug/sections/features/features
+  include ./pug/sections/about/about
+  include ./pug/sections/licenses/licenses
+  include ./pug/sections/reviews/reviews
+  include ./pug/sections/partners/partners
+  include ./pug/sections/faq/faq
+  include ./pug/sections/offer/offer
+  include ./pug/sections/contacts/contacts
+  
