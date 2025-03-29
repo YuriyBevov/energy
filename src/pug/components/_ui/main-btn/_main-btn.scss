@@ -1,0 +1,20 @@
+@forward "@styles/_extends/flexbox.scss";
+@forward "@styles/_extends/effects.scss";
+
+.main-btn {
+	@extend %flex-center;
+	width: 100%;
+	max-width: fit-content;
+	padding: 8px 20px;
+	font-size: 18px;
+	border-radius: var(--main-border-radius);
+	background-color: var(--primary);
+	color: var(--light);
+	@extend %hover-opacity;
+	cursor: pointer;
+
+	&--light {
+		background-color: var(--light);
+		color: var(--primary);
+	}
+}

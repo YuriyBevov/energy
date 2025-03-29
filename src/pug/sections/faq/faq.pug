@@ -1,4 +1,43 @@
-section
+include ../../components/_ui/accordeon/accordeon
+
+section.base-section.faq
   .container
-    h2 Вопросы и ответы
-    p Здесь вы найдете информацию о нашей продукции, услугах и других аспектах, связанных с поставками электрического и электронного оборудования.
+    .faq__grid
+      .faq__grid-item 
+        h2.base-title Вопросы и ответы
+        p.base-text Здесь вы найдете информацию о нашей продукции, услугах и других аспектах, связанных с поставками электрического и электронного оборудования.
+      .faq__grid-item
+        +accordeon([
+          {
+            text: 'Какие виды аккумуляторных батарей вы предлагаете?',
+            content: `
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos itaque magni odit facilis ratione ducimus et, aliquid voluptas maiores dicta hic delectus sequi fugiat accusantium natus saepe accusamus ipsa cumque.</p>
+            `
+          },
+          {
+            text: 'Как выбрать подходящий источник бесперебойного питания (ИБП)?',
+            content: `
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos itaque magni odit facilis ratione ducimus et, aliquid voluptas maiores dicta hic delectus sequi fugiat accusantium natus saepe accusamus ipsa cumque.</p>
+            `
+          },
+          {
+            text: 'Какие преимущества имеют солнечные модули, поставляемые вашей компанией?',
+            content: `
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos itaque magni odit facilis ratione ducimus et, aliquid voluptas maiores dicta hic delectus sequi fugiat accusantium natus saepe accusamus ipsa cumque.</p>
+            `
+          },
+          {
+            text: 'Каковы сроки доставки продукции из-за границы?',
+            content: `
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos itaque magni odit facilis ratione ducimus et, aliquid voluptas maiores dicta hic delectus sequi fugiat accusantium natus saepe accusamus ipsa cumque.</p>
+            `
+          },
+          {
+            text: 'Можете ли вы оказать помощь в установке и настройке оборудования?',
+            content: `
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos itaque magni odit facilis ratione ducimus et, aliquid voluptas maiores dicta hic delectus sequi fugiat accusantium natus saepe accusamus ipsa cumque.</p>
+            `
+          },
+        ])
+
+        

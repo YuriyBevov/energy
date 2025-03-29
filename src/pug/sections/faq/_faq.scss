@@ -1,0 +1,21 @@
+@forward "@styles/_extends/flexbox.scss";
+
+@use "@styles/_mixins/media-queries" as *;
+@use "@styles/_vars/scoped" as *;
+
+.faq {
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 20px 80px;
+		@include media-up($tablet-lg-width) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		&-item {
+			height: fit-content;
+			position: sticky;
+			top: 80px;
+		}
+	}
+}

@@ -89,3 +89,7 @@ picture,
 img {
 	display: flex;
 }
+
+.base-section {
+	padding: clamp(32px, 4vw, 64px) 0;
+}
