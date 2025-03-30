@@ -4,9 +4,14 @@
 .main-btn {
 	@extend %flex-center;
 	width: 100%;
+	min-width: 200px;
 	max-width: fit-content;
-	padding: 8px 20px;
+	padding: 16px 40px;
+	font-family: var(--primary-font);
 	font-size: 18px;
+	font-weight: 500;
+	min-height: 60px;
+	border: none;
 	border-radius: var(--main-border-radius);
 	background-color: var(--primary);
 	color: var(--light);

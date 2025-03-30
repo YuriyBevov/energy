@@ -1,0 +1,41 @@
+@forward "@styles/_extends/flexbox.scss";
+
+.review-card {
+	@extend %flex-column;
+	gap: 20px;
+	padding: 20px;
+	width: 100%;
+	// max-width: 460px;
+
+	background-color: var(--white);
+	border-radius: var(--main-border-radius);
+
+	.base-text {
+		text-align: left;
+	}
+
+	&__footer {
+		@extend %flex-column;
+		justify-content: center;
+		gap: 2px;
+
+		position: relative;
+		padding-left: 66px;
+		min-height: 56px;
+
+		img {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: 56px;
+			height: 56px;
+			aspect-ratio: 1/1;
+			object-fit: contain;
+		}
+
+		.base-text:first-of-type {
+			font-weight: 600;
+		}
+	}
+}

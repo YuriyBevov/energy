@@ -1,6 +1,6 @@
 /* purgecss start ignore */
 import { gsap } from "gsap";
-
+console.log("btn");
 window.addEventListener("load", () => {
 	const btn = document.createElement("button");
 	btn.classList.add("scroll-up-btn");

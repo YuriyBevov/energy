@@ -1,0 +1,14 @@
+@use "@pug/components/_ui/cards/product-card";
+
+.catalog-preview {
+	& > .base-text {
+		max-width: 1200px;
+	}
+
+	.swiper-slide {
+		width: calc(100% / 3);
+		max-width: fit-content;
+		min-width: 280px;
+		height: auto;
+	}
+}

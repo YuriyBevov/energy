@@ -2,7 +2,11 @@
 // import "../pug/components/_ui/sliders/base-cards-slider/base-cards-slider";
 // import "../pug/components/_ui/sliders/staff-preview-slider/staff-preview-slider";
 import "../pug/components/_ui/accordeon/accordeon";
+import "../pug/components/_ui/sliders/main-slider/main-slider";
 // import "../pug/components/_ui/nav/top-menu/top-menu";
-// import "./modules/scroll-up-btn";
+import "./modules/scroll-up-btn";
+import "./modules/fancy";
 // import "./modules/input-number-mask";
 // import "../pug/components/_ui/forms/callback-form/callback-form-height";
+import "@pug/components/_ui/sliders/infinity-slider/infinity-slider";
+import "@pug/components/_ui/sliders/reviews-slider/reviews-slider";

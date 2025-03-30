@@ -1,0 +1,8 @@
+include ../../cards/review-card
+
+mixin reviews-slider(data)
+  .swiper.reviews-slider
+    .swiper-wrapper
+      each item in data
+        .swiper-slide
+          +review-card(item)

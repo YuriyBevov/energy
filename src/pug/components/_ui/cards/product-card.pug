@@ -1,0 +1,21 @@
+include ../main-btn/main-btn
+
+mixin product-card(data)
+  .product-card
+    .product-card__header
+      img(src=`./assets/img/${data.img}.png` alt= data.title width="400" height="300")
+    
+    .product-card__body
+      span.base-subtitle!= data.title
+      p.base-text!= data.text
+
+      strong Преимущества:
+      ul
+        each feature in data.features
+          li!= feature
+    .product-card__footer
+      +main-btn({
+        tag: 'button',
+        type: 'button',
+        text: 'Заказать'
+      })

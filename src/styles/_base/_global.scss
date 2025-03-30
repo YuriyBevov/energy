@@ -92,4 +92,8 @@ img {
 
 .base-section {
 	padding: clamp(32px, 4vw, 64px) 0;
+
+	&__container {
+		padding: 32px 0;
+	}
 }

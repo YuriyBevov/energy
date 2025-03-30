@@ -1,0 +1,17 @@
+@forward "@styles/_extends/flexbox.scss";
+
+.licenses {
+	.swiper-slide {
+		@extend %flex-center;
+		width: fit-content;
+
+		img {
+			width: 100%;
+			height: auto;
+			max-height: 320px;
+			object-fit: contain;
+			object-position: center;
+			margin: auto;
+		}
+	}
+}

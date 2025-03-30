@@ -1,0 +1,8 @@
+mixin review-card(data)
+  .review-card
+    p.base-text!= data.content
+    .review-card__footer
+      img(src= data.logo alt= data.author width="56" height="56")
+      span.base-text!= data.author
+      span.base-text!= data.role 
+    

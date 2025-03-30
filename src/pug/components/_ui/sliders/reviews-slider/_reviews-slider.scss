@@ -1,0 +1,15 @@
+@forward "@styles/_extends/flexbox.scss";
+@forward "@styles/_extends/effects.scss";
+@forward "@styles/_extends/resets.scss";
+@use "@styles/_mixins/container-queries" as *;
+@use "@styles/_vars/scoped" as *;
+
+@forward "@pug/components/_ui/cards/review-card";
+
+.reviews-slider {
+	width: 100%;
+	.swiper-slide {
+		width: 100%;
+		height: auto;
+	}
+}

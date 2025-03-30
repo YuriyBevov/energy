@@ -1,4 +1,47 @@
-section.base-section
+include ../../components/_ui/sliders/infinity-slider/infinity-slider
+
+section.base-section.partners
   .container
     h2.base-title Наши партнеры
     p.base-text В нашем бизнесе мы гордимся тем, что сотрудничаем с широким спектром клиентов, стремящихся к инновационным и экологически чистым решениям в сфере электрического и электронного оборудования. Наша продукция, включая аккумуляторные батареи, источники бесперебойного питания, солнечные модули и другие компоненты, находит применение во множестве отраслей.
+
+    .base-section__container
+      +infinity-slider([
+        {
+          img: 'client-logo', 
+          title: 'client-logo-name'
+        },
+        {
+          img: 'client-logo', 
+          title: 'client-logo-name'
+        },
+        {
+          img: 'client-logo', 
+          title: 'client-logo-name'
+        },
+        {
+          img: 'client-logo', 
+          title: 'client-logo-name'
+        },
+        {
+          img: 'client-logo', 
+          title: 'client-logo-name'
+        },
+        {
+          img: 'client-logo', 
+          title: 'client-logo-name'
+        },
+        {
+          img: 'client-logo', 
+          title: 'client-logo-name'
+        },
+        {
+          img: 'client-logo', 
+          title: 'client-logo-name'
+        },
+        {
+          img: 'client-logo', 
+          title: 'client-logo-name'
+        },
+      
+      ])
