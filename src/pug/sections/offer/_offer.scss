@@ -1,0 +1,74 @@
+@forward "@styles/_extends/flexbox.scss";
+@forward "@styles/_extends/effects.scss";
+@forward "@styles/_extends/resets.scss";
+@use "@styles/_mixins/container-queries" as *;
+@use "@styles/_vars/scoped" as *;
+
+.offer {
+	container: offer / inline-size;
+	&-form {
+		background-image: url("@img/offer-bg.png");
+		background-size: cover;
+		background-position: center;
+		padding: clamp(45px, 4vw, 70px) clamp(10px, 3vw, 120px);
+		border-radius: var(--main-border-radius);
+		min-height: 600px;
+
+		form {
+			@extend %flex-column;
+			gap: 20px;
+		}
+
+		.base-title {
+			margin: 0;
+		}
+
+		.base-title,
+		.base-text {
+			color: var(--white);
+			text-align: center;
+		}
+
+		fieldset {
+			@extend %fieldset-reset;
+			@extend %flex-column;
+			align-items: center;
+			gap: 10px;
+			width: 100%;
+			max-width: 600px;
+			margin: 0 auto;
+
+			@include container-up("offer", $tablet-lg-width) {
+				margin: revert;
+			}
+
+			.main-checkbox-wrapper {
+				margin: 10px 0;
+			}
+		}
+
+		@include container-up("offer", $tablet-lg-width) {
+			padding-right: 40%;
+			position: relative;
+
+			.base-title,
+			.base-text {
+				text-align: left;
+			}
+
+			&::after {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 0;
+				content: "";
+				background-image: url("@img/offer-img.png");
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+				width: 40%;
+				height: 80%;
+			}
+		}
+	}
+}

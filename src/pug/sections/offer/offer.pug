@@ -1,3 +1,40 @@
-section
+include ../../components/_ui/form-controls/main-input/main-input
+include ../../components/_ui/form-controls/main-checkbox/main-checkbox
+section.base-section.offer
   .container
-    h2 Закажите наше оборудование прямо сейчас
+    .offer-form
+      form(action="#")
+        h2.base-title Закажите наше оборудование прямо сейчас
+        p.base-text Пожалуйста, заполните форму ниже, чтобы мы могли лучше понять ваши требования и предложить вам оптимальное решение. Мы свяжемся с вами в кратчайшие сроки.
+
+        fieldset
+          +main-input({
+            isInvalid: false,
+            id: 'user-name',
+            placeholder: 'Ваше имя*',
+            name: 'NAME'
+          })
+
+          +main-input({
+            isInvalid: false,
+            id: 'user-phone',
+            placeholder: 'Ваш телефон*',
+            name: 'PHONE'
+          })
+
+          +main-input({
+            isInvalid: false,
+            id: 'user-mail',
+            placeholder: 'Ваша почта',
+            name: 'MAIL'
+          })
+
+          +main-checkbox({
+            isInvalid: false,
+            id: 'user-accept',
+            label: `Нажимая на кнопку “отправить заявку” вы соглашаетесь с <a href="#">политикой конфиденциальности</a>`,
+            name: 'ACCEPT',
+            checked
+          })
+
+          input(type="submit" value="Отправить заявку").main-btn
