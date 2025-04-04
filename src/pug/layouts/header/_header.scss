@@ -1,11 +1,44 @@
 @forward "@styles/_extends/flexbox.scss";
-@use "@styles/_mixins/container-queries" as *;
+@use "@styles/_mixins/media-queries" as *;
 @use "@styles/_vars/scoped" as *;
 
 .header {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
+	.container {
+		@extend %flex-align;
+		gap: 24px;
+	}
+
+	.main-logo {
+		margin-right: auto;
+		svg {
+			fill: var(--primary);
+			width: 80px;
+			height: auto;
+		}
+	}
+
+	.social {
+		display: none;
+		svg {
+			fill: var(--primary);
+		}
+	}
+
+	.main-btn {
+		display: none;
+	}
+
+	.burger {
+	}
+
+	@include media-up($mobile-width) {
+		.main-btn,
+		.social {
+			display: flex;
+		}
+
+		.burger {
+			display: none;
+		}
+	}
 }

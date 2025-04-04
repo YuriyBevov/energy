@@ -40,6 +40,7 @@
 
 			@include container-up("offer", $tablet-lg-width) {
 				margin: revert;
+				align-items: flex-start;
 			}
 
 			.main-checkbox-wrapper {

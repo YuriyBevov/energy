@@ -1,0 +1,29 @@
+@forward "@styles/_extends/flexbox.scss";
+@forward "@styles/_extends/effects.scss";
+@forward "@styles/_extends/resets.scss";
+@use "@styles/_mixins/media-queries" as *;
+@use "@styles/_vars/scoped" as *;
+
+.top-menu {
+	flex-grow: 1;
+	color: var(--primary);
+
+	ul {
+		@extend %list-reset;
+		@extend %flex-column;
+		gap: 12px;
+
+		@include media-up($tablet-lg-width) {
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 32px;
+		}
+
+		a {
+			font-size: 16px;
+			color: var(--primary);
+			@extend %hover-opacity;
+		}
+	}
+}

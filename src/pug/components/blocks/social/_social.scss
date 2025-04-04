@@ -1,0 +1,17 @@
+@forward "@styles/_extends/flexbox.scss";
+@forward "@styles/_extends/effects.scss";
+@use "@styles/_mixins/container-queries" as *;
+@use "@styles/_vars/scoped" as *;
+
+.social {
+	@extend %flex-align;
+	gap: 12px;
+
+	a {
+		@extend %hover-opacity;
+
+		svg {
+			fill: var(--white);
+		}
+	}
+}

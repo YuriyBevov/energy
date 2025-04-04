@@ -1,3 +1,20 @@
+include ../../components/_ui/main-btn/main-btn
 footer.footer
   .container
-    span footer
+    .footer__section.footer__section--top
+      a(href="/").main-logo 
+        svg(width='50' height='50' role='img' aria-hidden='true' focusable='false')
+          use(xlink:href='./assets/sprite-svg#icon-logo')
+
+      include ../../components/blocks/bottom-menu/bottom-menu
+      
+      include ../../components/blocks/social/social
+
+      +main-btn({
+        tag: 'button',
+        text: 'Заказать звонок'
+      })
+
+    .footer__section.footer__section--bottom
+      span.base-text 2025. Все права защищены.
+      a(href="#").base-text Политика конфиденциальности
