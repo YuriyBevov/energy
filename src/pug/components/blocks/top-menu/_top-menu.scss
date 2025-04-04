@@ -12,6 +12,7 @@
 		@extend %list-reset;
 		@extend %flex-column;
 		gap: 12px;
+		width: 100%;
 
 		@include media-up($tablet-lg-width) {
 			flex-direction: row;

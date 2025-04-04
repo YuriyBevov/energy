@@ -30,12 +30,24 @@
 		min-height: 44px;
 	}
 
-	.burger {
+	.top-menu {
+		display: none;
 	}
 
 	@include media-up($mobile-width) {
-		.main-btn,
+		.main-btn {
+			display: flex;
+		}
+	}
+
+	@include media-up(640px) {
 		.social {
+			display: flex;
+		}
+	}
+
+	@include media-up($desktop-width) {
+		.top-menu {
 			display: flex;
 		}
 

@@ -1,0 +1,37 @@
+@forward "@styles/_extends/flexbox.scss";
+@forward "@styles/_extends/resets.scss";
+@forward "@styles/_extends/effects.scss";
+
+.burger {
+	@extend %btn-reset;
+	@extend %flex-column;
+	gap: 2px;
+	padding: 5px;
+	background-color: var(--primary);
+	width: 56px;
+	height: 40px;
+	border-radius: var(--main-border-radius);
+	@extend %hover-opacity;
+
+	&__line {
+		width: 16px;
+		height: 2px;
+		border-radius: 2px;
+		background-color: var(--white);
+	}
+
+	&.active {
+		.burger__line--middle {
+			display: none;
+		}
+
+		.burger__line--top {
+			transform: rotate(45deg);
+		}
+
+		.burger__line--bottom {
+			transform: rotate(-45deg);
+			margin-top: -4px;
+		}
+	}
+}
