@@ -1,14 +1,24 @@
+include ../../_ui/main-btn/main-btn
+include ../../_ui/burger/burger
 nav.top-menu
-  ul
-    li
-      a(href="#") Наша продукция
-    li
-      a(href="#") Преимущества литиевых АКБ
-    li
-      a(href="#") О нас
-    li
-      a(href="#") Сертификаты
-    li
-      a(href="#") Отзывы
-    li
-      a(href="#") Контакты
+  .top-menu__wrapper
+    ul
+      li
+        a(href="#") Наша продукция
+      li
+        a(href="#") Преимущества литиевых АКБ
+      li
+        a(href="#") О нас
+      li
+        a(href="#") Сертификаты
+      li
+        a(href="#") Отзывы
+      li
+        a(href="#") Контакты
+    
+    include ../social/social
+
+    +main-btn({
+      tag: 'button',
+      text: 'Заказать звонок'
+    })

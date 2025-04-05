@@ -1,4 +1,5 @@
-button(type="button" aria-label="Меню").burger.active
-  span(aria-hidden="true").burger__line.burger__line--top
-  span(aria-hidden="true").burger__line.burger__line--middle
-  span(aria-hidden="true").burger__line.burger__line--bottom
+mixin burger(data)
+  button(type="button" aria-label="Меню" class= data.cls).burger
+    span(aria-hidden="true").burger__line.burger__line--top
+    span(aria-hidden="true").burger__line.burger__line--middle
+    span(aria-hidden="true").burger__line.burger__line--bottom

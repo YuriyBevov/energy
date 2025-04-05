@@ -1,4 +1,5 @@
 include ../../components/_ui/main-btn/main-btn
+include ../../components/_ui/burger/burger 
 header.header
   .container
     a(href="/").main-logo 
@@ -13,6 +14,8 @@ header.header
       tag: 'button',
       text: 'Заказать звонок'
     })
-
-    include ../../components/_ui/burger/burger 
+    
+    +burger({
+      cls: 'top-menu-opener'
+    })
     
